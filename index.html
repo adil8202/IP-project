@@ -1,16 +1,397 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Your Name | Information Systems Student Portfolio</title>
+  <meta name="description" content="Portfolio of Your Name, an Information Systems student at Wollo University: skills, projects, education and contact details.">
+  <meta name="author" content="Your Name">
+  <meta property="og:title" content="Your Name | Portfolio">
+  <meta property="og:description" content="Information Systems student building web projects.">
+
+  <!-- Added in the next steps -->
+  <link rel="stylesheet" href="index.css">
+  <script src="js/script.js" defer></script>
 </head>
 <body>
-    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Labore, vitae aspernatur eveniet voluptatum sit maiores laboriosam explicabo eos? Dolorem, distinctio? Quibusdam magni earum voluptatibus cum atque voluptatem commodi fugit consequuntur?</p>
-    <h1>personlan </h1>
+
+  <!-- Skip link for keyboard and screen-reader users -->
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <!-- ===================== HEADER + NAVIGATION ===================== -->
+  <header id="top" class="site-header">
+    <a class="logo" href="#home">ADIL M/D</a>
+
+    <!-- JS (step 3): opens and closes the mobile menu -->
+    <button id="menu-toggle" class="menu-toggle" type="button"
+            aria-controls="main-nav" aria-expanded="false">Menu</button>
+
+    <nav id="main-nav" class="main-nav" aria-label="Main navigation">
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#education">Education</a></li>
+        <li><a href="#achievements">Achievements</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+
+    <!-- JS (step 3): dark / light mode -->
+    <button id="theme-toggle" class="theme-toggle" type="button"
+            aria-label="Switch between dark and light mode">Dark mode</button>
+  </header>
+
+  <main id="main">
+
+    <!-- ===================== HOME ===================== -->
+    <section id="home" class="hero" aria-labelledby="hero-title">
+      <div class="hero-text">
+        <!-- JS (step 3): greeting changes with the time of day -->
+        <p id="greeting">Hello, welcome to my portfolio.</p>
+        <h1 id="hero-title">I'm ADIL MOHAMMMED </h1>
+        <p>I build clear, accessible websites and I am learning full-stack web development at Wollo University.</p>
+        <p class="hero-actions">
+          <a class="btn btn-primary" href="#projects">View my projects</a>
+          <a class="btn btn-secondary" href="#contact">Contact me</a>
+          <a class="btn btn-secondary" href="files/ADIL M.D CV.pdf" download>Download my CV</a>
+        </p>
+      </div>
+      <figure class="hero-photo">
+        <img src="images/profile.jpg" alt="Portrait of Your Name smiling in front of a campus building"
+             width="400" height="400">
+      </figure>
+    </section>
+
+
+    <!-- ===================== SKILLS ===================== -->
+    <section id="skills" aria-labelledby="skills-title">
+      <h2 id="skills-title">Skills</h2>
+
+      <h3>Technical skills</h3>
+      <!-- JS/CSS (steps 2-3): animated progress bars -->
+      <ul class="skill-list">
+        <li>
+          <label for="skill-html">HTML5</label>
+          <progress id="skill-html" value="85" max="100">85%</progress>
+        </li>
+        <li>
+          <label for="skill-css">CSS3</label>
+          <progress id="skill-css" value="70" max="100">70%</progress>
+        </li>
+        <li>
+          <label for="skill-js">JavaScript</label>
+          <progress id="skill-js" value="55" max="100">55%</progress>
+        </li>
+        <li>
+          <label for="skill-git">Git and GitHub</label>
+          <progress id="skill-git" value="65" max="100">65%</progress>
+        </li>
+      </ul>
+
+      <h3>Soft skills</h3>
+      <ul>
+        <li>Teamwork</li>
+        <li>Communication</li>
+        <li>Problem solving</li>
+        <li>Time management</li>
+      </ul>
+    </section>
+
+    <!-- ===================== PROJECTS ===================== -->
+    <section id="projects" aria-labelledby="projects-title">
+      <h2 id="projects-title">Projects</h2>
+
+      <!-- JS (step 3): filter projects by data-category -->
+      <div class="filter-bar" role="group" aria-label="Filter projects">
+        <button type="button" class="filter-btn active" data-filter="all">All</button>
+        <button type="button" class="filter-btn" data-filter="web">Web</button>
+        <button type="button" class="filter-btn" data-filter="database">Database</button>
+      </div>
+
+      <div class="project-grid">
+
+        <article class="project-card" data-category="web">
+          <img src="images/project-coffee.jpg" alt="Screenshot of the Bahir Dar Coffee website home page"
+               width="600" height="400" loading="lazy">
+          <h3>Coffee Shop Website</h3>
+          <p>A three-page website for a local coffee shop with a menu, an about page and a contact form.</p>
+          <p><strong>Tools:</strong> HTML, CSS</p>
+          <p>
+            <!-- JS (step 3): opens a modal with more details -->
+            <button type="button" class="details-btn" data-project="coffee">View details</button>
+            <a href="https://github.com/your-username/coffee-shop" target="_blank" rel="noopener noreferrer">Source code on GitHub</a>
+          </p>
+        </article>
+
+        <article class="project-card" data-category="database">
+          <img src="images/project-students.jpg" alt="Screenshot of a student records table with search box"
+               width="600" height="400" loading="lazy">
+          <h3>Student Records System</h3>
+          <p>A small system that stores student names, departments and results, with search and sorting.</p>
+          <p><strong>Tools:</strong> HTML, JavaScript, SQL</p>
+          <p>
+            <button type="button" class="details-btn" data-project="students">View details</button>
+            <a href="https://github.com/your-username/student-records" target="_blank" rel="noopener noreferrer">Source code on GitHub</a>
+          </p>
+        </article>
+
+        <article class="project-card" data-category="web">
+          <img src="images/project-todo.jpg" alt="Screenshot of a to-do list app with three tasks"
+               width="600" height="400" loading="lazy">
+          <h3>Study Planner</h3>
+          <p>A to-do list for planning study sessions. Tasks are saved in the browser so they remain after a refresh.</p>
+          <p><strong>Tools:</strong> HTML, CSS, JavaScript</p>
+          <p>
+            <button type="button" class="details-btn" data-project="planner">View details</button>
+            <a href="https://github.com/your-username/study-planner" target="_blank" rel="noopener noreferrer">Source code on GitHub</a>
+          </p>
+        </article>
+
+      </div>
+
+      <!-- JS (step 3): project details modal -->
+      <dialog id="project-modal" aria-labelledby="modal-title">
+        <h3 id="modal-title">Project title<!-- ===================== ABOUT ===================== -->
+    <section id="about" aria-labelledby="about-title">
+      <h2 id="about-title">About me</h2>
+      <p>I am a student of Information Systems at Wollo University in Dessie, Ethiopia. I enjoy turning ideas into working websites and solving everyday problems with technology.</p>
+      <p>Outside class I read about web design, help classmates with coding exercises and follow open-source projects on GitHub.</p>
+
+      <h3>Interests</h3>
+      <ul class="interest-list">
+        <li>Web development</li>
+        <li>Databases and data analysis</li>
+        <li>Reading and learning new tools</li>
+        <li>Football</li>
+      </ul>
+<!-- ===================== ABOUT ===================== -->
+    <section id="about" aria-labelledby="about-title">
+      <h2 id="about-title">About me</h2>
+      <p>I am a student of Information Systems at Wollo University in Dessie, Ethiopia. I enjoy turning ideas into working websites and solving everyday problems with technology.</p>
+      <p>Outside class I read about web design, help classmates with coding exercises and follow open-source projects on GitHub.</p>
+
+      <h3>Interests</h3>
+      <ul class="interest-list">
+        <li>Web development</li>
+        <li>Databases and data analysis</li>
+        <li>Reading and learning new tools</li>
+        <li>Football</li>
+      </ul>
+<!-- ===================== ABOUT ===================== -->
+    <section id="about" aria-labelledby="about-title">
+      <h2 id="about-title">About me</h2>
+      <p>I am a student of Information Systems at Wollo University in Dessie, Ethiopia. I enjoy turning ideas into working websites and solving everyday problems with technology.</p>
+      <p>Outside class I read about web design, help classmates with coding exercises and follow open-source projects on GitHub.</p>
+
+      <h3>Interests</h3>
+      <ul class="interest-list">
+        <li>Web development</li>
+        <li>Databases and data analysis</li>
+        <li>Reading and learning new tools</li>
+        <li>Football</li>
+      </ul>
+<!-- ===================== ABOUT ===================== -->
+    <section id="about" aria-labelledby="about-title">
+      <h2 id="about-title">About me</h2>
+      <p>I am a student of Information Systems at Wollo University in Dessie, Ethiopia. I enjoy turning ideas into working websites and solving everyday problems with technology.</p>
+      <p>Outside class I read about web design, help classmates with coding exercises and follow open-source projects on GitHub.</p>
+
+      <h3>Interests</h3>
+      <ul class="interest-list">
+        <li>Web development</li>
+        <li>Databases and data analysis</li>
+        <li>Reading and learning new tools</li>
+        <li>Football</li>
+      </ul>
+
+      <h3>Quick facts</h3>
+      <dl>
+        <dt>Location</dt>
+        <dd>Dessie, Amhara, Ethiopia</dd>
+        <dt>Languages</dt>
+        <dd>Amharic (አማርኛ), English</dd>
+        <dt>Currently learning</dt>
+        <dd>HTML, CSS, JavaScript and Git</dd>
+      </dl>
+    </section>
+      <h3>Quick facts</h3>
+      <dl>
+        <dt>Location</dt>
+        <dd>Dessie, Amhara, Ethiopia</dd>
+        <dt>Languages</dt>
+        <dd>Amharic (አማርኛ), English</dd>
+        <dt>Currently learning</dt>
+        <dd>HTML, CSS, JavaScript and Git</dd>
+      </dl>
+    </section>
+      <h3>Quick facts</h3>
+      <dl>
+        <dt>Location</dt>
+        <dd>Dessie, Amhara, Ethiopia</dd>
+        <dt>Languages</dt>
+        <dd>Amharic (አማርኛ), English</dd>
+        <dt>Currently learning</dt>
+        <dd>HTML, CSS, JavaScript and Git</dd>
+      </dl>
+    </section>
+      <h3>Quick facts</h3>
+      <dl>
+        <dt>Location</dt>
+        <dd>Dessie, Amhara, Ethiopia</dd>
+        <dt>Languages</dt>
+        <dd>Amharic (አማርኛ), English</dd>
+        <dt>Currently learning</dt>
+        <dd>HTML, CSS, JavaScript and Git</dd>
+      </dl>
+    </section></h3>
+        <p id="modal-text">Project description goes here.</p>
+        <button type="button" id="modal-close">Close</button>
+      </dialog>
+    </section>
+
+    <!-- ===================== EDUCATION ===================== -->
+    <section id="education" aria-labelledby="education-title">
+      <h2 id="education-title">Education</h2>
+
+      <ol class="timeline">
+        <li>
+          <h3>BSc in Information Systems</h3>
+          <p>Wollo University, Dessie</p>
+          <p><time datetime="2023-09">September 2023</time> to present</p>
+          <p>Courses: Internet and Web Programming I, Database Systems, Programming Fundamentals.</p>
+        </li>
+        <li>
+          <h3>Preparatory School</h3>
+          <p>Your High School Name, Your Town</p>
+          <p><time datetime="2021-09">2021</time> to <time datetime="2023-06">2023</time></p>
+          <p>Completed the natural science stream.</p>
+        </li>
+      </ol>
+    </section>
+
+    <!-- ===================== ACHIEVEMENTS ===================== -->
+    <section id="achievements" aria-labelledby="achievements-title">
+      <h2 id="achievements-title">Achievements</h2>
+      <ul>
+        <li>Dean's list, first semester of 2024</li>
+        <li>Certificate: Responsive Web Design (online course)</li>
+        <li>Member of the department coding club</li>
+        <li>Volunteer in a campus computer-skills training day</li>
+      </ul>
+    </section>
+
+    <!-- ===================== ABOUT ===================== -->
+    <section id="about" aria-labelledby="about-title">
+      <h2 id="about-title">About me</h2>
+      <p>I am a student of Information Systems at Wollo University in Dessie, Ethiopia. I enjoy turning ideas into working websites and solving everyday problems with technology.</p>
+      <p>Outside class I read about web design, help classmates with coding exercises and follow open-source projects on GitHub.</p>
+
+      <h3>Interests</h3>
+      <ul class="interest-list">
+        <li>Web development</li>
+        <li>Databases and data analysis</li>
+        <li>Reading and learning new tools</li>
+        <li>Football</li>
+      </ul>
+
+      <h3>Quick facts</h3>
+      <dl>
+        <dt>Location</dt>
+        <dd>Dessie, Amhara, Ethiopia</dd>
+        <dt>Languages</dt>
+        <dd>Amharic (አማርኛ), English</dd>
+        <dt>Currently learning</dt>
+        <dd>HTML, CSS, JavaScript and Git</dd>
+      </dl>
+    </section>
+
+    <!-- ===================== CONTACT ===================== -->
+    <section id="contact" aria-labelledby="contact-title">
+      <h2 id="contact-title">Contact me</h2>
+
+      <address>
+        <p>E-mail: <a href="mailto:yourname@example.com">yourname@example.com</a></p>
+        <p>Phone: <a href="tel:+251911000000">+251 911 000 000</a></p>
+        <p>GitHub: <a href="https://github.com/your-username" target="_blank" rel="noopener noreferrer">github.com/your-username</a></p>
+      </address>
+
+      <!-- JS (step 3): extra client-side validation and a success message -->
+      <form id="contact-form" action="#" method="post" novalidate>
+        <fieldset>
+          <legend>Send me a message</legend>
+
+          <p>
+            <label for="name">Full name</label>
+            <input type="text" id="name" name="name" required minlength="3"
+                   autocomplete="name" placeholder="Almaz Tesfaye">
+            <span class="error" id="name-error" aria-live="polite"></span>
+          </p>
+
+          <p>
+            <label for="email">E-mail</label>
+            <input type="email" id="email" name="email" required
+                   autocomplete="email" placeholder="almaz@example.com">
+            <span class="error" id="email-error" aria-live="polite"></span>
+          </p>
+
+          <p>
+            <label for="phone">Phone (optional)</label>
+            <input type="tel" id="phone" name="phone" pattern="09[0-9]{8}"
+                   title="10 digits starting with 09" autocomplete="tel">
+          </p>
+
+          <p>
+            <label for="subject">Subject</label>
+            <select id="subject" name="subject" required>
+              <option value="">Choose a subject</option>
+              <option value="project">Project work</option>
+              <option value="internship">Internship</option>
+              <option value="other">Other</option>
+            </select>
+          </p>
+
+          <p>
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="5" required minlength="10"
+                      maxlength="500"></textarea>
+            <span class="error" id="message-error" aria-live="polite"></span>
+          </p>
+
+          <p>
+            <label>
+              <input type="checkbox" name="consent" required>
+              I agree to be contacted by e-mail
+            </label>
+          </p>
+
+          <p>
+            <button type="submit" class="btn btn-primary">Send message</button>
+            <button type="reset" class="btn btn-secondary">Clear form</button>
+          </p>
+          <p id="form-status" role="status"></p>
+        </fieldset>
+      </form>
+    </section>
+
+  </main>
+
+    <!-- ===================== FOOTER ===================== -->
+  <footer class="site-footer">
+    <p>&copy; 2026 Your Name. Built with HTML, CSS and JavaScript.</p>
+    <nav aria-label="Footer navigation">
+      <ul>
+        <li><a href="https://github.com/your-username" target="_blank" rel="noopener noreferrer">GitHub</a></li>
+        <li><a href="https://www.linkedin.com/in/your-username" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
+        <li><a href="#top">Back to top</a></li>
+      </ul>
+    </nav>
+  </footer>
+ 
 </body>
 </html>
-
+ 
 
 
 
