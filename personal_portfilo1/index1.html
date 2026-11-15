@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Personal Portfolio of a passionate Web Developer and Computer Science student.">
+  <title>Adil Mohammed | PROTOFILO </title>
+
+  <!-- Google Fonts: Space Grotesk & Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+   <link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+  <link rel="stylesheet" href="style1.css">
+</head>
+<body>
+
+  <!-- Top Scroll Reading Bar -->
+  <div id="scroll-progress" class="scroll-progress" aria-hidden="true"></div>
+
+  <!-- Ambient Glow Background Orbs -->
+  <div class="glow-orb orb-1" aria-hidden="true"></div>
+  <div class="glow-orb orb-2" aria-hidden="true"></div>
+
+  <!-- ==================== HEADER & NAVBAR ==================== -->
+  <header class="header">
+    <nav class="navbar container" aria-label="Main Navigation">
+      <a href="#home" class="logo">Adil<span class="logo-accent">.dev</span></a>
+
+      <ul class="nav-links" id="nav-links">
+        <li><a href="#home" class="nav-item">Home</a></li>
+        <li><a href="#about" class="nav-item">About</a></li>
+        <li><a href="#skills" class="nav-item">Skills</a></li>
+        <li><a href="#education" class="nav-item">Education</a></li>
+        <li><a href="#projects" class="nav-item">Projects</a></li>
+        <li><a href="#contact" class="nav-item">Contact</a></li>
+      </ul>
+
+      <div class="nav-actions">
+        <button id="theme-toggle" class="icon-btn" aria-label="Toggle Dark/Light Mode">🌙</button>
+        <button id="menu-toggle" class="hamburger" aria-label="Open Navigation Menu" aria-expanded="false">☰</button>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <!-- ==================== 1. HOME / HERO SECTION ==================== -->
+    <section id="home" class="hero section">
+      <div class="container hero-layout">
+        <div class="hero-content">
+          <div class="badge">🚀 Information systems student </div>
+          <h1 class="hero-title">
+            Hi - I AM ADIL MOHAMMED <br><br>I built <span class="gradient-text">modern web experiences</span>
+          </h1>
+          <p class="hero-typing">
+                I am interested in <span id="typewriter" class="typewriter-text"></span><span class="cursor">|</span>
+          </p>
+          <p class="hero-desc">
+               I'm a third-year Information Systems student
+                at <span class="gradient-text" >Wollo  University</span>, passionate about web
+                development, technology, and building useful
+                digital solutions.
+          </p>
+          <div class="hero-buttons">
+            <a href="#projects" class="btn btn-primary">View Featured Work</a>
+            <a href="assets/docs/cv.pdf" download class="btn btn-glass">Download CV ↗</a>
+          </div>
+        </div>
+        <div class="hero-visual">
+          <div class="avatar-card glass-card">
+            <img src="image/adil.png" alt="Portrait of Adil Mohammed" class="hero-photo" width="220" height="220">
+            <div class="avatar-floating-badge glass-card">
+              <span class="status-indicator"></span> 3rd Year IS Student
+            </div>
+
+<!-- SOCIAL MEDIA LINKS -->
+<div class="avatar-social-links">
+
+    <a href="https://github.com/adil8202"
+       target="_blank"
+       rel="noopener noreferrer"
+       class="social-badge glass-card">
+        <i class="fab fa-github"></i>
+        GitHub
+    </a>
+
+    <a href="https://www.linkedin.com/in/YOUR_USERNAME/"
+       target="_blank"
+       rel="noopener noreferrer"
+       class="social-badge glass-card">
+        <i class="fab fa-linkedin"></i>
+        LinkedIn
+    </a>
+
+    <a href="mailto:adil830701@gmail.com"
+       class="social-badge glass-card">
+        <i class="fas fa-envelope"></i>
+        Email
+    </a>
+
+</div>
+
+
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== 2. ABOUT ME SECTION ==================== -->
+    <section id="about" class="about section reveal">
+      <div class="container">
+        <h2 class="section-title">About <span class="gradient-text">Me</span></h2>
+        <div class="about-grid">
+          <div class="about-story glass-card">
+            <h3>My Journey</h3>
+            <p>
+                    Hello! I'm Adil Mohammed, a third-year
+                    Information Systems student at Wollo University.
+                    I'm passionate about technology, programming,
+                    and creating useful digital solutions.         
+               </p>
+            <p>
+                    My journey in technology involves learning
+                    programming languages, web development,
+                    database systems, and software development.
+                    I enjoy exploring new technologies and
+                    improving my technical skills through
+                    practical projects.
+               </p>
+            <p>
+                    My goal is to grow as a software developer,
+                    build meaningful projects, and use technology
+                    to solve real-world problems.
+            </p>
+
+            <div class="interests-tags">
+              <span class="tag-pill">UI/UX DESIGN</span>
+              <span class="tag-pill">FRONTEND DEV</span>
+              <span class="tag-pill">BACKEND DEV</span>
+              <span class="tag-pill">DATABASE MANAGEMENT</span>            
+              <span class="tag-pill">PROBLEM SOLVING</span>
+
+            </div>
+          </div>
+
+          
+<div class="about-highlights">
+
+    <!-- CARD 1 -->
+    <div class="stat-card glass-card">
+        <span class="stat-number">
+            <i class="fas fa-graduation-cap"></i>
+        </span>
+        <span class="stat-label">
+            Information Systems Student
+        </span>
+    </div>
+
+    <!-- CARD 2 -->
+    <div class="stat-card glass-card">
+        <span class="stat-number">
+            <i class="fas fa-laptop-code"></i>
+        </span>
+        <span class="stat-label">
+            Web Development Enthusiast
+        </span>
+    </div>
+
+    <!-- CARD 3 -->
+    <div class="stat-card glass-card">
+        <span class="stat-number">
+            <i class="fas fa-lightbulb"></i>
+        </span>
+        <span class="stat-label">
+            Creative Problem Solver
+        </span>
+    </div>
+
+</div>
+
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== 3. SKILLS SECTION ==================== -->
+    <section id="skills" class="skills section reveal">
+      <div class="container">
+        <h2 class="section-title">Technical <span class="gradient-text">Proficiencies</span></h2>
+        <div class="skills-grid">
+          <!-- Frontend Card -->
+          <article class="skill-card glass-card">
+            <h3>Frontend Engineering</h3>
+            <div class="skill-item">
+              <div class="skill-info"><span>HTML5 (Semantic & Accessible)</span><span>95%</span></div>
+              <div class="progress-bar"><div class="fill" data-progress="95%"></div></div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-info"><span>CSS3 (Flexbox, Grid, Animations)</span><span>90%</span></div>
+              <div class="progress-bar"><div class="fill" data-progress="90%"></div></div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-info"><span>JavaScript (ES6+, DOM, Async)</span><span>85%</span></div>
+              <div class="progress-bar"><div class="fill" data-progress="85%"></div></div>
+            </div>
+          </article>
+
+          <!-- Tools & Backend Card -->
+          <article class="skill-card glass-card">
+            <h3>Tools & Methodologies</h3>
+            <div class="skill-item">
+              <div class="skill-info"><span>Git & GitHub (Version Control)</span><span>88%</span></div>
+              <div class="progress-bar"><div class="fill" data-progress="88%"></div></div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-info"><span>Responsive & Mobile-First Design</span><span>92%</span></div>
+              <div class="progress-bar"><div class="fill" data-progress="92%"></div></div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-info"><span>Browser DevTools & Optimization</span><span>80%</span></div>
+              <div class="progress-bar"><div class="fill" data-progress="80%"></div></div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== 4. EDUCATION & ACHIEVEMENTS ==================== -->
+    <section id="education" class="education section reveal">
+      <div class="container">
+        <h2 class="section-title">Education & <span class="gradient-text">Milestones</span></h2>
+        <div class="timeline">
+          <!-- Item 1 -->
+          <article class="timeline-item glass-card">
+            <span class="timeline-date">2023 – Present</span>
+            <h3>B.Sc. in Computer Science</h3>
+            <p class="timeline-place">Faculty of Technology, University Campus</p>
+            <p>
+              Current GPA: 3.8 / 4.0. Completed core coursework in Internet Programming I, Data Structures & Algorithms, Database Management Systems, and Object-Oriented Analysis.
+            </p>
+          </article>
+
+          <!-- Item 2 -->
+          <article class="timeline-item glass-card">
+            <span class="timeline-date">2024</span>
+            <h3>Dean's Honor Roll</h3>
+            <p class="timeline-place">Academic Achievement Award</p>
+            <p>Awarded for outstanding academic performance and maintaining top percentile standing in Computer Science coursework.</p>
+          </article>
+
+          <!-- Item 3 -->
+          <article class="timeline-item glass-card">
+            <span class="timeline-date">2021 – 2023</span>
+            <h3>Higher Secondary School Certificate</h3>
+            <p class="timeline-place">High School Academy of Science</p>
+            <p>Graduated with high honors, with concentrations in Advanced Mathematics and Physics.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== 5. PROJECTS SECTION ==================== -->
+    <section id="projects" class="projects section reveal">
+      <div class="container">
+        <h2 class="section-title">Featured <span class="gradient-text">Projects</span></h2>
+
+        <!-- Interactive Filtering Controls -->
+        <div class="filter-group">
+          <button class="filter-btn active" data-filter="all">All</button>
+          <button class="filter-btn" data-filter="frontend">Frontend</button>
+          <button class="filter-btn" data-filter="javascript">JavaScript</button>
+        </div>
+
+        <div class="projects-grid">
+          <!-- Project 1 -->
+          <article class="project-card glass-card" data-category="frontend">
+            <div class="project-image-wrapper">
+              <svg class="project-svg" viewBox="0 0 300 180" xmlns="http://www.w3.org/2000/svg">
+                <rect width="300" height="180" fill="#1e1b4b" />
+                <rect x="25" y="25" width="250" height="130" rx="6" fill="#312e81" />
+                <circle cx="45" cy="45" r="5" fill="#f43f5e" />
+                <circle cx="60" cy="45" r="5" fill="#fbbf24" />
+                <circle cx="75" cy="45" r="5" fill="#10b981" />
+                <text x="100" y="105" fill="#a5b4fc" font-family="sans-serif" font-size="14">Personal Portfolio</text>
+              </svg>
+            </div>
+            <div class="project-body">
+              <span class="category-badge">Frontend</span>
+              <h3>Responsive Developer Portfolio</h3>
+              <p>A fully semantic, responsive portfolio featuring dark/light theming, CSS glassmorphism, and live form validation.</p>
+              <div class="project-tags"><span>HTML5</span><span>CSS3</span><span>Vanilla JS</span></div>
+              <button class="btn-sm btn-modal" data-modal="modal-portfolio">Deep Dive & Architecture</button>
+            </div>
+          </article>
+
+          <!-- Project 2 -->
+          <article class="project-card glass-card" data-category="javascript">
+            <div class="project-image-wrapper">
+              <svg class="project-svg" viewBox="0 0 300 180" xmlns="http://www.w3.org/2000/svg">
+                <rect width="300" height="180" fill="#064e3b" />
+                <rect x="25" y="25" width="250" height="130" rx="6" fill="#065f46" />
+                <circle cx="45" cy="45" r="5" fill="#f43f5e" />
+                <circle cx="60" cy="45" r="5" fill="#fbbf24" />
+                <circle cx="75" cy="45" r="5" fill="#10b981" />
+                <text x="95" y="105" fill="#6ee7b7" font-family="sans-serif" font-size="14">Productivity Hub</text>
+              </svg>
+            </div>
+            <div class="project-body">
+              <span class="category-badge">JavaScript</span>
+              <h3>Interactive Task Manager</h3>
+              <p>Task tracker with category grouping, filtering, search, and state synchronization via the Web Storage API.</p>
+              <div class="project-tags"><span>ES6</span><span>LocalStorage</span><span>DOM</span></div>
+              <button class="btn-sm btn-modal" data-modal="modal-task">Deep Dive & Architecture</button>
+            </div>
+          </article>
+
+          <!-- Project 3 -->
+          <article class="project-card glass-card" data-category="frontend">
+            <div class="project-image-wrapper">
+              <svg class="project-svg" viewBox="0 0 300 180" xmlns="http://www.w3.org/2000/svg">
+                <rect width="300" height="180" fill="#1e293b" />
+                <rect x="25" y="25" width="250" height="130" rx="6" fill="#334155" />
+                <circle cx="45" cy="45" r="5" fill="#f43f5e" />
+                <circle cx="60" cy="45" r="5" fill="#fbbf24" />
+                <circle cx="75" cy="45" r="5" fill="#10b981" />
+                <text x="110" y="105" fill="#93c5fd" font-family="sans-serif" font-size="14">Weather UI</text>
+              </svg>
+            </div>
+            <div class="project-body">
+              <span class="category-badge">Frontend</span>
+              <h3>Climate Dashboard UI</h3>
+              <p>Dynamic weather widget mockup with responsive cards, temperature scale conversion, and CSS SVG visualizers.</p>
+              <div class="project-tags"><span>CSS Grid</span><span>API Handling</span><span>Flexbox</span></div>
+              <button class="btn-sm btn-modal" data-modal="modal-weather">Deep Dive & Architecture</button>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== 6. CONTACT SECTION ==================== -->
+    <section id="contact" class="contact section reveal">
+      <div class="container">
+        <h2 class="section-title">Let's <span class="gradient-text">Connect</span></h2>
+        <div class="contact-grid">
+          <!-- Information Column -->
+          <div class="contact-info glass-card">
+            <h3>Contact Information</h3>
+            <p>I am eager to discuss internship opportunities, project collaborations, or academic inquiries.</p>
+            <div class="contact-entry">
+              <span class="entry-icon">📍</span>
+              <div>
+                <strong>Location</strong>
+                <p>University Campus, City</p>
+              </div>
+            </div>
+            <div class="contact-entry">
+              <span class="entry-icon">✉️</span>
+              <div>
+                <strong>Email</strong>
+                <p>alex.morgan@example.com</p>
+              </div>
+            </div>
+            <div class="contact-entry">
+              <span class="entry-icon">💻</span>
+              <div>
+                <strong>GitHub</strong>
+                <p>github.com/alexmorgan-dev</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Validated Form -->
+          <form id="contact-form" class="contact-form glass-card" novalidate>
+            <div class="form-control">
+              <label for="name">Your Name *</label>
+              <input type="text" id="name" name="name" placeholder="Jane Doe" required>
+              <small class="error-msg" id="name-error"></small>
+            </div>
+
+            <div class="form-control">
+              <label for="email">Your Email Address *</label>
+              <input type="email" id="email" name="email" placeholder="jane@example.com" required>
+              <small class="error-msg" id="email-error"></small>
+            </div>
+
+            <div class="form-control">
+              <label for="subject">Subject *</label>
+              <input type="text" id="subject" name="subject" placeholder="Project Inquiry / Job Opportunity" required>
+              <small class="error-msg" id="subject-error"></small>
+            </div>
+
+            <div class="form-control">
+              <label for="message">Message *</label>
+              <textarea id="message" name="message" rows="5" placeholder="Write your message here..." required></textarea>
+              <small class="error-msg" id="message-error"></small>
+            </div>
+
+            <button type="submit" class="btn btn-primary btn-block">Send Message</button>
+            <div id="form-alert" class="form-alert" role="alert"></div>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ==================== FOOTER ==================== -->
+  <footer class="footer">
+    <div class="container footer-layout">
+      <p>&copy; <span id="current-year"></span> Alex Morgan. Built for Internet Programming I.</p>
+      <div class="footer-links">
+        <a href="#home">Back to Top ↑</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ==================== PROJECT DETAILS MODAL ==================== -->
+  <div id="project-modal" class="modal" aria-hidden="true" role="dialog" aria-labelledby="modal-title">
+    <div class="modal-overlay" id="modal-overlay"></div>
+    <div class="modal-content glass-card">
+      <button id="modal-close" class="modal-close" aria-label="Close details popup">&times;</button>
+      <h3 id="modal-title">Project Details</h3>
+      <p id="modal-desc">Description text will appear here.</p>
+      <div id="modal-tags" class="project-tags"></div>
+    </div>
+  </div>
+
+  <!-- Back to Top Button -->
+  <button id="back-to-top" class="back-to-top" aria-label="Back to top">↑</button>
+
+ <script src="index1.js"></script>
+</body>
+</html>

@@ -1,10 +1,11 @@
+
 /* ==========================================================================
    1. Design Tokens, CSS Variables & Themes
    ========================================================================== */
 :root {
   --font-heading: 'Space Grotesk', -apple-system, sans-serif;
   --font-body: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-
+ 
   /* Light Palette */
   --bg-page: #f8fafc;
   --surface: rgba(255, 255, 255, 0.75);
@@ -18,7 +19,7 @@
   --shadow: 0 10px 30px -5px rgba(0, 0, 0, 0.05);
   --glass-blur: blur(14px);
 }
-
+ 
 [data-theme="dark"] {
   /* Dark Palette */
   --bg-page: #090d16;
@@ -32,18 +33,18 @@
   --gradient: linear-gradient(135deg, #6366f1 0%, #38bdf8 100%);
   --shadow: 0 10px 30px -5px rgba(0, 0, 0, 0.4);
 }
-
+ 
 /* Base Reset */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
-
+ 
 html {
   scroll-behavior: smooth;
 }
-
+ 
 body {
   font-family: var(--font-body);
   background-color: var(--bg-page);
@@ -53,7 +54,7 @@ body {
   overflow-x: hidden;
   transition: background-color 0.3s ease, color 0.3s ease;
 }
-
+ 
 /* Background Ambient Orbs */
 .glow-orb {
   position: absolute;
@@ -65,10 +66,10 @@ body {
   pointer-events: none;
   z-index: -1;
 }
-
+ 
 .orb-1 { background: #6366f1; top: 5%; left: -150px; }
 .orb-2 { background: #06b6d4; top: 45%; right: -150px; }
-
+ 
 /* Top Scroll Reading Progress */
 .scroll-progress {
   position: fixed;
@@ -80,18 +81,18 @@ body {
   z-index: 2500;
   transition: width 0.1s linear;
 }
-
+ 
 /* Container & Sections */
 .container {
   width: 90%;
   max-width: 1150px;
   margin: 0 auto;
 }
-
+ 
 .section {
   padding: 6rem 0;
 }
-
+ 
 .section-title {
   font-family: var(--font-heading);
   font-size: 2.3rem;
@@ -99,13 +100,13 @@ body {
   margin-bottom: 3.5rem;
   letter-spacing: -0.02em;
 }
-
+ 
 .gradient-text {
   background: var(--gradient);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
-
+ 
 /* Glassmorphism Card System */
 .glass-card {
   background: var(--surface);
@@ -116,12 +117,12 @@ body {
   box-shadow: var(--shadow);
   transition: transform 0.25s ease, border-color 0.25s ease;
 }
-
+ 
 .glass-card:hover {
   transform: translateY(-4px);
   border-color: var(--accent-light);
 }
-
+ 
 /* ==========================================================================
    2. Header & Sticky Navigation
    ========================================================================== */
@@ -134,14 +135,14 @@ body {
   -webkit-backdrop-filter: var(--glass-blur);
   border-bottom: 1px solid var(--surface-border);
 }
-
+ 
 .navbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 1.1rem 0;
 }
-
+ 
 .logo {
   font-family: var(--font-heading);
   font-size: 1.5rem;
@@ -149,17 +150,17 @@ body {
   text-decoration: none;
   color: var(--text-primary);
 }
-
+ 
 .logo-accent {
   color: var(--accent);
 }
-
+ 
 .nav-links {
   display: flex;
   gap: 2rem;
   list-style: none;
 }
-
+ 
 .nav-links a {
   text-decoration: none;
   color: var(--text-muted);
@@ -167,17 +168,17 @@ body {
   font-size: 0.95rem;
   transition: color 0.2s ease;
 }
-
+ 
 .nav-links a:hover {
   color: var(--accent);
 }
-
+ 
 .nav-actions {
   display: flex;
   align-items: center;
   gap: 0.75rem;
 }
-
+ 
 .icon-btn, .hamburger {
   background: var(--surface);
   border: 1px solid var(--surface-border);
@@ -188,20 +189,25 @@ body {
   font-size: 1.1rem;
   transition: background 0.2s ease;
 }
-
+ 
 .hamburger {
   display: none;
 }
+ 
 
-/* ==========================================================================
-   3. Hero Section
+ /*========== 3. Hero Section
    ========================================================================== */
 .hero-layout {
   display: grid;
-  grid-template-columns: 1.2fr 0.8fr;
+  grid-template-columns: 1.2fr 0.8fr;   /* text left, photo right */
   align-items: center;
   gap: 3rem;
   min-height: 75vh;
+}
+
+.hero-visual {
+  display: flex;
+  justify-content: center;
 }
 
 .badge {
@@ -293,7 +299,7 @@ body {
 }
 
 .avatar-card {
-  padding: 2.5rem;
+  padding: 2rem 2rem 3.5rem;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -301,9 +307,16 @@ body {
   position: relative;
 }
 
-.hero-svg {
-  width: 180px;
-  height: 180px;
+.hero-photo {
+  width: 220px;
+  height: 220px;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: center top;
+  border: 4px solid transparent;
+  background: linear-gradient(var(--bg-page), var(--bg-page)) padding-box,
+              linear-gradient(135deg, #4f46e5, #06b6d4) border-box;
+  box-shadow: 0 10px 30px rgba(79, 70, 229, 0.25);
 }
 
 .avatar-floating-badge {
@@ -323,7 +336,6 @@ body {
   border-radius: 50%;
   background: #10b981;
 }
-
 /* ==========================================================================
    4. About Me
    ========================================================================== */
@@ -813,10 +825,16 @@ body {
     grid-template-columns: 1fr;
   }
 
+@media (max-width: 992px) {
   .avatar-card {
-    display: none; /* Hide visual on smaller tablets to keep focus on text */
+    padding: 1.5rem;
+  }
+  .hero-photo {
+    width: 180px;
+    height: 180px;
   }
 }
+
 
 @media (max-width: 768px) {
   .hamburger {
